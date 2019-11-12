@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% from "_macros.html" import desplegableMovil %}
+    {% from "_macros.html" import tituloSubtitulo %}
+
+    <h1>El usuario es {{ user }}</h1>
+    {% if user == "toni" %}
+    <h2>Es el mejor</h2>
+    {%endif %}
+
+    {% for i in ("Inicio", "Galeria", "Contactar") %}
+    <a href="{{ i }}.html">{{ i }}</a>
+    {% endfor %}
+
+
+    {{ tituloSubtitulo("Eltiempoenmallorca", "Palma") }}
+    {{ desplegableMovil("Galeria1", "Galeria2", "Galeria3", "Galeria4") }}
+
+    {% include "menuprincipal.html" %}
+
+</body>
+
+</html>

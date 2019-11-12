@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <a href="{{ url_for("contacto") }}">
+    <p>1. Contacto </p>
+  </a>
+
+  <a href="{{ url_for("param", otraruta="otrodddd" ) }}">
+    <p>2. ejerciico2 </p>
+  </a>
+
+  <a href="{{ url_for("param", otraruta="SJHDFJSHDFSKDF", entero=12 ) }}">
+    <p>3. ejercicio 3 </p>
+  </a>
+
+  <a href="{{ url_for("parame", nombre="noodjhdjhd") }}">
+    <p>4. ejercicio 4 </p>
+  </a>
+
+  <a href="{{ url_for("ejercicio") }}">
+    <p>5. ejercicio 5 </p>
+  </a>
+
+
+
+
+</body>
+
+</html>

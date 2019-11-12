@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  {% from "_macros.html" import formularioContactar %}
+  <div>
+    <form action="/" method="post">
+      {% for i in form %}
+      <div>{{ formularioContactar(i) }}</div>
+      {% endfor %}
+
+      <button type="submit">Enviar</button>
+
+    </form>
+    <p>
+      El campo nombre esta obligado a rellenarlo, tamaño minimo de 3 y maximo de 25, sino sale error de nombre
+      incorrecto<br>
+      El campo email tiene que tener formato email
+    </p>
+  </div>
+  {% include "menuprincipal.html" %}
+
+</body>
+
+</html>
